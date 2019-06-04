@@ -42,6 +42,7 @@ git checkout r1.13
 ./configure ( i used CPU version)
 bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
 bazel build //tensorflow:libtensorflow_cc.so
+bazel build //tensorflow:libtensorflow.so
 
 ```
 
