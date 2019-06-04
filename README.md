@@ -86,6 +86,7 @@ Example freeze graph file is included in this repo.
 ## Build
 
 Edit tensorflow path(Assume you build TensorFlow from source code) in `bootstrap.sh`, then
+
 ```
 e.g  TF_DIR =/usr/local/tensorflow-1.13.1
      TF_EXTERNAL_DIR = /usr/local/tensorflow-1.13.1/bazel-tensorflow-1.13.1
@@ -93,10 +94,13 @@ e.g  TF_DIR =/usr/local/tensorflow-1.13.1
 ```
 
 ```
+$ export CC=clang
+$ export CXX=clang++
 $ ./bootstrap.sh
 $ build
 $ make
 ```
+Note :Use Clang for Compilation of Project as with GCC i was getting  "ASAN:DEADLYSIGNAL" error .
 
 ## Run
 
