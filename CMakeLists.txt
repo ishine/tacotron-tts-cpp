@@ -103,7 +103,7 @@ target_link_libraries( tts
 
 # Increase warning level for clang.
 IF (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    target_compile_options(tts PRIVATE -Weverything -Werror -Wno-padded -Wno-c++98-compat-pedantic -Wno-documentation -Wno-documentation-unknown-command)
+    target_compile_options(tts PRIVATE -Weverything -Wno-padded -Wno-c++98-compat-pedantic -Wno-documentation -Wno-documentation-unknown-command)
 ENDIF ()
 
 add_sanitizers(tts)
