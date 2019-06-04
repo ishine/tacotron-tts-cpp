@@ -132,7 +132,8 @@ See `sample/sequence01.json` for generated example.
 Then,
 
 ```
-$ ./tts -i ../sample/sequence01.json -g ../tacotron_frozen.pb -o output.wav
+$ ./tts -i ../sample/sequence01.json -g ../tacotron_frozen.pb 
+(generates output.wav)
 ```
 
 We need to further process generated `output.wav`.
