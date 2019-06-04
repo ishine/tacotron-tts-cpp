@@ -75,6 +75,11 @@ Example freeze graph file is included in this repo.
 ## Build
 
 Edit tensorflow path(Assume you build TensorFlow from source code) in `bootstrap.sh`, then
+```
+e.g  TF_DIR =/usr/local/tensorflow-1.13.1
+     TF_EXTERNAL_DIR = /usr/local/tensorflow-1.13.1/bazel-tensorflow-1.13.1
+     TF_BUILD_DIR = /usr/local/tensorflow-1.13.1/bazel-bin/tensorflow
+```
 
 ```
 $ ./bootstrap.sh
