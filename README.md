@@ -41,8 +41,18 @@ cd tensorflow
 git checkout r1.13
 ./configure ( i used CPU version)
 bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+bazel build //tensorflow:libtensorflow_cc.so
 
 ```
+
+*  ABSL library
+
+```
+cd /usr/local/inclue
+git clone https://github.com/abseil/abseil-cpp.git
+mv abseil-cpp/absl .
+```
+
 ## Dump graph.
 
 In keithito's tacotron repo, append `tf.train.write_graph` to `Synthesizer::load` to save TensorFlow graph.
