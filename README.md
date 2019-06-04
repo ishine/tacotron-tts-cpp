@@ -26,14 +26,14 @@ Python postprocessing is required to do `inv_preemphasis` for Tacotron generated
 COmpilation of this projects requires compiling tensorflow from source as it uses some headers files that are generated 
 during compilation of tensorflow ( bazel compilation)
 
-* Install  Bazel 0.21 ( Not version above that)
+*  Install  Bazel 0.21 ( Not version above that)
 
-``
+```
 wget https://github.com/bazelbuild/bazel/releases/download/0.21.0/bazel-0.21.0-installer-linux-x86_64.sh
 bash bazel-0.21.0-installer-linux-x86_64.sh
 ```
 
-* Install Tensorflow
+*  Install Tensorflow
 
 ```
 git clone https://github.com/tensorflow/tensorflow.git
@@ -41,6 +41,7 @@ cd tensorflow
 git checkout r1.13
 ./configure ( i used CPU version)
 bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+
 ```
 ## Dump graph.
 
