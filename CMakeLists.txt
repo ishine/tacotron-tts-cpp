@@ -92,6 +92,7 @@ target_include_directories(tts
 
 target_link_libraries( tts
     # TensorFlow C++
+    tensorflow_framework
     tensorflow_cc
 
     ${TTS_EXT_LIBS}
