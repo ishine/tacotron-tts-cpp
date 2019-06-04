@@ -21,6 +21,27 @@ Python postprocessing is required to do `inv_preemphasis` for Tacotron generated
 * Ubuntu 16.04
 * C++ compiler + cmake
 
+## Compiling Tensorflow 1.13 
+
+COmpilation of this projects requires compiling tensorflow from source as it uses some headers files that are generated 
+during compilation of tensorflow ( bazel compilation)
+
+* Install  Bazel 0.21 ( Not version above that)
+
+``
+wget https://github.com/bazelbuild/bazel/releases/download/0.21.0/bazel-0.21.0-installer-linux-x86_64.sh
+bash bazel-0.21.0-installer-linux-x86_64.sh
+```
+
+* Install Tensorflow
+
+```
+git clone https://github.com/tensorflow/tensorflow.git
+cd tensorflow
+git checkout r1.13
+./configure ( i used CPU version)
+bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+```
 ## Dump graph.
 
 In keithito's tacotron repo, append `tf.train.write_graph` to `Synthesizer::load` to save TensorFlow graph.
