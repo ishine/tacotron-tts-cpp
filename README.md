@@ -65,6 +65,8 @@ https://gist.github.com/EKami/9869ae6347f68c592c5b5cd181a3b205 ( For ARM Linux)
 
 https://www.pytorials.com/how-to-install-tensorflow-gpu-with-cuda-10-0-for-python-on-ubuntu/2/
 
+https://medium.com/@sometimescasey/building-tensorflow-from-source-for-sse-avx-fma-instructions-worth-the-effort-fbda4e30eec3
+
 
 ## Dump graph.
 
