@@ -54,6 +54,15 @@ git clone https://github.com/abseil/abseil-cpp.git
 mv abseil-cpp/absl .
 ```
 
+## Tensorflow compilation Links
+
+https://gist.github.com/EKami/9869ae6347f68c592c5b5cd181a3b205
+http://wangkejie.me/2018/03/01/tensorflow-cplusplus-installation/
+https://tuanphuc.github.io/standalone-tensorflow-cpp/
+https://gist.github.com/EKami/9869ae6347f68c592c5b5cd181a3b205 ( For ARM Linux)
+https://www.pytorials.com/how-to-install-tensorflow-gpu-with-cuda-10-0-for-python-on-ubuntu/2/
+
+
 ## Dump graph.
 
 In keithito's tacotron repo, append `tf.train.write_graph` to `Synthesizer::load` to save TensorFlow graph.
