@@ -44,6 +44,10 @@ bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
 bazel build //tensorflow:libtensorflow_cc.so
 bazel build //tensorflow:libtensorflow.so
 
+More optimizaed build for the x86 platform without cuda
+bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2 //tensorflow:libtensorflow_cc.so
+bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2 //tensorflow:libtensorflow.so
+
 ```
 
 *  ABSL library
