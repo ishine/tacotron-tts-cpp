@@ -49,6 +49,8 @@ bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2
 bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2 //tensorflow:libtensorflow.so
 
 ```
+* Note : if you abort or build failure error , increase swap space . ( OOM killer message in dmesg)
+
 
 *  ABSL library
 
