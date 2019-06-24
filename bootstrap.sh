@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#GCC has some issue, tts build with that crashes so using clang
+export CC=clang
+export CXX=clang++
+
 # source code directory of tensorflow
 TF_DIR=`pwd`/../tensorflow
 
