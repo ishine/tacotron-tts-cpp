@@ -36,7 +36,7 @@ bash bazel-0.21.0-installer-linux-x86_64.sh
 *  Install Tensorflow
 
 ```
-git clone https://github.com/tensorflow/tensorflow.git
+git clone --recurse-submodules https://github.com/tensorflow/tensorflow.git
 cd tensorflow
 git checkout r1.13
 ./configure ( i used CPU version)
