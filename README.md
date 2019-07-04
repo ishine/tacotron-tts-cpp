@@ -47,8 +47,10 @@ bazel build //tensorflow:libtensorflow.so
 More optimizaed build for the x86 platform without cuda
 bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2 //tensorflow:libtensorflow_cc.so
 bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2 //tensorflow:libtensorflow.so
+```
 
-** Behind Proxy 
+**  Behind Proxy 
+```
 If you are behind proxy bazel wont be able to download the packages, so create a folder  say "dist" 
 and download each of the packages by copying the URL using wget ( wget works with Proxy)
 eg. i had to download these packages
