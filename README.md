@@ -36,7 +36,7 @@ bash bazel-0.21.0-installer-linux-x86_64.sh
 *  Install Tensorflow
 
 ```
-git clone https://github.com/tensorflow/tensorflow.git
+git clone --recurse-submodules https://github.com/tensorflow/tensorflow.git
 cd tensorflow
 git checkout r1.13
 ./configure ( i used CPU version)
@@ -47,6 +47,25 @@ bazel build //tensorflow:libtensorflow.so
 More optimizaed build for the x86 platform without cuda
 bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2 //tensorflow:libtensorflow_cc.so
 bazel build --config=opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-msse4.2 //tensorflow:libtensorflow.so
+```
+
+**  Behind Proxy 
+```
+If you are behind proxy bazel wont be able to download the packages, so create a folder  say "dist" 
+and download each of the packages by copying the URL using wget ( wget works with Proxy)
+eg. i had to download these packages
+ wget https://github.com/bazelbuild/bazel-skylib/releases/download/0.8.0/bazel-skylib.0.8.0.tar.gz
+ wget http://mirror.tensorflow.org/github.com/protocolbuffers/protobuf/archive/310ba5ee72661c081129eb878c1bbcec936b20f0.tar.gz
+ wget https://github.com/protocolbuffers/protobuf/archive/310ba5ee72661c081129eb878c1bbcec936b20f0.tar.gz]
+ wget https://github.com/protocolbuffers/protobuf/archive/310ba5ee72661c081129eb878c1bbcec936b20f0.tar.gz
+ wget https://github.com/abseil/abseil-cpp/archive/43ef2148c0936ebf7cb4be6b19927a9d9d145b8f.tar.gz
+ wget https://github.com/abseil/abseil-cpp/archive/43ef2148c0936ebf7cb4be6b19927a9d9d145b8f.tar.gz
+ wget http://mirror.tensorflow.org/github.com/unicode-org/icu/archive/release-62-1.tar.gz
+ wget https://github.com/llvm-mirror/llvm/archive/6e11f192fc555ebfca595403b0f5cdc3aa47a4de.tar.gz
+ 
+ then Build using 
+
+ bazel build ................. --distdir dist
 
 ```
 
